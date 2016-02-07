@@ -7,17 +7,17 @@
 var people = [
 	{
 		name: 'Hector Romo',
-		mail: 'hector@frimod.com',
+		email: 'hector@frimod.com',
 		attended_classes: [ false, false, false, false, false ]
 	},
 	{
 		name: 'Emanuel Munoz',
-		mail: 'emanuel@frimod.com',
+		email: 'emanuel@frimod.com',
 		attended_classes: [ false, false, false, false, false ]
 	},
 	{
 		name: 'Diego Riano',
-		mail: 'diego@frimod.com',
+		email: 'diego@frimod.com',
 		attended_classes: [ false, false, false, false, false ]
 	}
 ];
@@ -31,7 +31,7 @@ var list = new Vue({
 		pupils: people,
 		newPupil: {
 			name: '',
-			mail: ''
+			email: ''
 		}
 	},
 
@@ -39,14 +39,13 @@ var list = new Vue({
 		addPupil: function() {
 			var newPupil = {
 				name: this.newPupil.name,
-				mail: this.newPupil.mail,
+				email: this.newPupil.email,
 				attended_classes: [ false, false, false, false, false ]
 			};
 
 			this.pupils.push(newPupil);
-
 			this.newPupil.name = '';
-			this.newPupil.mail = '';
+			this.newPupil.email = '';
 		},
 
 		removePupil: function(pupil) {
