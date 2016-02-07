@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EDC list</title>
+</head>
+<body>
+
+
+	<div id="app">
+
+		<input type="text" placeholder="name" v-model="newPupil.name" @keyup.enter="addPupil" />
+		<input type="text" placeholder="mail" v-model="newPupil.mail" @keyup.enter="addPupil" />
+		
+		<ul id="pupils" v-for="pupil in pupils">
+			<li>
+				<h2>{{ pupil.name }}</h2>
+				<span>{{ pupil.mail }}</span>
+				<a href="#" @click="removePupil(pupil)">Remove</a>
+			</li>
+		</ul>
+
+	</div>
+
+
+	<script type="text/javascript" src="bower_components/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
